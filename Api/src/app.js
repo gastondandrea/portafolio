@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
+const path = require('path');
 
 require('./db.js');
 
@@ -21,6 +22,9 @@ server.use((req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
 });
+
+// Configurar el servidor para servir el favicon
+server.use(express.static(path.join(__dirname, 'public')));
 
 server.use('/', routes);
 
