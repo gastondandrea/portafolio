@@ -1,0 +1,2 @@
+export const GET_ALL_PROJECTS = "GET_ALL_PROJECTS";
+export const SET_IS_LONDING = "SET_IS_LONDING";
