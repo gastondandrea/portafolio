@@ -1,10 +1,9 @@
 .container-nav-nav{
+    position: relative; /* esto permite que el menú se posicione respecto a él */
     width: 100vw;
     background-color: #FDFFFC;
     padding: 16px 0;
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
 }
 .container-ul-nav{
     display: flex;
@@ -13,6 +12,7 @@
     list-style: none;
     padding: 0 5vw;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .container-hamburger-menu-nav{
@@ -20,6 +20,15 @@
     gap: 2vw;
     align-items: center;
     font-size: 20px;
+}
+
+.container-img-hamburgerMenu img{
+    width: 40px;
+    height: 40px;
+}
+
+.container-img-hamburgerMenu{
+    display: none;
 }
 
 .contaner-logo-nav img{
@@ -34,9 +43,44 @@
 a{
     color: black;
     cursor: default;
+    text-decoration: none;
 }
 
 a:hover{
     color: black;
     cursor: default;
 }
+
+.container-hamburger-menu-nav li a{
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .container-img-hamburgerMenu {
+        display: block;
+        cursor: pointer;
+    }
+  
+    .container-hamburger-menu-nav li a{
+        cursor: pointer;
+    }
+
+    .container-hamburger-menu-nav {
+        display: none;
+        position: absolute; /* para que se superponga */
+        top: 100%; /* justo debajo del navbar */
+        left: 0;
+        width: 100vw;
+        background-color: #FDFFFC;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 0;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        z-index: 1000; /* asegura que quede encima */
+    }
+
+    .container-hamburger-menu-nav.show {
+        display: flex;
+    }
+  }
