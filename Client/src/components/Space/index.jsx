@@ -1,8 +1,6 @@
-import './space.css';
-
 function Space() {
     return(
-        <div className='space-container'>
+        <div className='h-20 w-full px-16'>
         </div>
     )
 }

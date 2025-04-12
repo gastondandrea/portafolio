@@ -1,4 +1,3 @@
-import './contact.css';
 import linkedin from "../../assets/img/linkedin.svg";
 import github from "../../assets/img/github.svg";
 
