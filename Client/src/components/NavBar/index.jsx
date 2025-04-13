@@ -1,6 +1,6 @@
 // import { useState } from 'react';
-// import linkedin from "../../assets/img/linkedin.svg";
-// import github from "../../assets/img/github.svg";
+import linkedin from "../../assets/img/linkedin.svg";
+import github from "../../assets/img/github.svg";
 // import hamburgerMenu from "../../assets/img/hamburger-menu.svg";
 // import closeMenu from "../../assets/img/close-menu.svg";
 
@@ -23,15 +23,13 @@ function NavBar() {
 
 
   return (
-    <nav className="flex justify-between w-full bg-[#FDFFFC] py-4 px-8 shadow-md top-0 fixed z-10 h-24">
-      <ul className="flex items-center">
-        <li className='font-semibold text-2xl'>
+    <nav className="flex justify-between w-full bg-[#FDFFFC] py-4 px-16 shadow-md top-0 fixed z-10 h-24">
+      <div className="flex items-center font-semibold text-3xl">
           <NavLink to='/' >
             Gastón D'Andrea
           </NavLink>
-        </li>
-      </ul>
-      <ul className="flex items-center gap-3">
+      </div>
+      <ul className="flex items-center gap-8 text-2xl font-normal">
         <li>
           <NavLink 
             to='/acerca-de-mi'
@@ -49,10 +47,14 @@ function NavBar() {
           </NavLink>
         </li>
         <li>
-          Ln
+          <a href="https://linkedin.com/in/gastondandrea" target="_blank" rel="noopener noreferrer">
+            <img src={linkedin} alt="linkedin" className="w-10 h-10 md:w-10 md:h-10" />
+          </a>
         </li>
         <li>
-          Gh
+          <a href="https://github.com/gastondandrea" target="_blank" rel="noopener noreferrer">
+            <img src={github} alt="github" className="w-10 h-10 md:w-10 md:h-10" />
+          </a>
         </li>
         <li>
           <NavLink 
