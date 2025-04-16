@@ -1,6 +1,6 @@
-function Space() {
+function Space({height}) {
     return(
-        <div className='h-20 w-full px-16'>
+        <div style={{ height: `${height}px` }} className={`w-full px-16`}>
         </div>
     )
 }

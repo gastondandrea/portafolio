@@ -13,8 +13,8 @@ function App() {
 
   return (
     <>
-      <AppRoutes/>
       <NavBar/>
+      <AppRoutes/>
     </>
   )
 };
